@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bold{
+            font-weight: bold;
+        }
+        h2{
+            color:white;
+            background-color: black;
+            text-align: center;
+        }
+        .navtext{
+       color: white;
+       font-size: 35px;
+       line-height: 80px;
+       padding: 35px;
+       font-weight: bold;
+}
+footer{
+    background-color: blue;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #2A2E30;
+}
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar ul li{
+    list-style: none;
+    font-size: 20px;
+    border-right: 2px solid #1a82f7 ;
+    line-height: 26px;
+}
+.navbar ul li a{
+    padding: 0px 15px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: #1a82f7;
+}
+
+.dropdown-content{
+    display: none;
+}
+.navbar ul li:hover .dropdown-content{
+    display: block;
+    position: absolute;
+    background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+    color: white;
+    z-index: 1;
+
+}
+.navbar ul li:hover .dropdown-content ul {
+    display: block;
+    margin: 10px;
+}
+.navbar ul li:hover .dropdown-content ul li{
+    border-bottom:2px solid #1a82f7;
+    border-right: none;
+    padding: 5px 0px 5px 0px;
+}
+.navbar ul li:hover .dropdown-content ul li:last-child{
+    border-bottom: none;
+}
+.navtext{
+       color: white;
+       font-size: 35px;
+       line-height: 80px;
+       padding: 35px;
+       font-weight: bold;
+}
+.container {
+    display: none;
+    cursor: pointer;
+  }
+ 
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    color: #2A2E30;
+    transition: 0.4s;
+  }
+  
+ 
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+ 
+  .change .bar2 {opacity: 0;}
+ 
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .checkbtn{
+       font-size: 30px;
+       color: white;
+       float: right;
+       line-height: 80px;
+       margin-right: 40px;
+       cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+
+  @media (max-width: 952px){
+    .navtext{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .container{
+        display:none;
+    }
+ }
+ .header{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+ nav ul li a{
+    font-size: 16px;
+ }
+ @media (max-width: 858px){
+    checkbtn{
+        display: block;
+    }
+    .container{
+        display:block;
+        text-align: right;
+        
+    }
+
+   .bar1 .bar2 .bar3{
+    display: block;
+    color:white;
+    background-color: black;
+   }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+ }
+ section{
+    background-size: cover;
+    height: calc(100vh - 80px);
+ }
+    </style>
+
+</head>
+
+<body>
+    <header> 
+        <div class="header">
+            <div class="logo">
+                <img src="logo (1).png">
+            </div>
+            <div class="center-heading">
+                <h1>International Journal of Engineering Technology And Applied Science (IJETAS)</h1>
+                <p>A Engineering Publication Hub</p>
+            </div>
+        </div>
+        <div class="navbar"> 
+          <h1 class="navtext"> IJETAS </h1>
+          <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+         <ul>
+            <li><a class="1" href="home.html" class="active">Home</a></li>
+            <li>
+                <a href="Editorial Board Members.html">Editorial Board</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="Editorial Board Members.html">Editorial Board Members</a></li>
+                        <li><a href="News and Updates.html">News & Updates</a></li>
+                        <li><a href="Join Our Board.html">Join Our Board</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="2" href="Indexing.html">Indexing</a></li>
+            <li><a class="3" href="special issue.html">Special Issue</a></li>
+            <li>
+                <a class="4"href="#">Submit Your Paper</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="Online Submission.html">Online Submission</a></li>
+                        <li><a href="Manuscript Publicationn Fees.html">Manuscript Publication Fees</a></li>
+                        <li><a href="Call For Paper.html">Call For Paper</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="5" href="Up Coming Events.html">Upcoming Event</a></li>
+            <li>
+                <a href="Download Form.html">Download</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">AUTHOR INSTRUCTIONS FOR MANUSCRIPT</a></li>
+                        <li><a href="#">COVERING LETTER</a></li>
+                        <li><a href="#">JOIN US</a></li>
+                        <li><a href="#">REVIEWR FORM</a></li>
+                        <li><a href="#">TRANSFER OF COPYRIGHT AGREEMENT</a></li>
+                        <li><a href="#">Manuscript Template</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a class="6"href="#">Subject Category</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">Computer Science Engineering</a></li>
+                        <li><a href="#">Artificial Intelligence</a></li>
+                        <li><a href="#">Civil Engineering</a></li>
+                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Mechanical Engineering</a></li>
+                        <li><a href="#">Electrical Engineering</a></li>
+                        <li><a href="#">Cyber Security </a></li>
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Maths</a></li>
+                        
+
+
+
+                    </ul>
+                </div>
+            </li>
+            <li><a class="7" href="#">IJETAS Menu</a>
+                <div class="dropdown-content">
+                    <ul>
+                      <a href="Call For Paper.html"> Call For Paper </a>
+                      <a href="Manuscript Publicationn Fees.html"> Publilcation Charge </a>
+                      <a href="Indexing.html"> Indexing </a>
+                      <a href="author guidelines.html"> Author Guideline </a>
+                     
+                    </ul>
+                    <li><a href="Contact.html">Contact Us</a>
+        </ul>
+            </div>
+       </header>
+       
+    
+    <h2 style="padding: 15px;"> Author Guidelines </h2>
+   <h3> AUTHOR INSTRUCTIONS FOR MANUSCRIPT </h3>
+
+ <h4> CRITERIA FOR AUTHORSHIP </h4>
+<p> 1. Substantial contributions to conception and design, acquisition of data, or analysis and interpretation of data.
+
+    2. Drafting the article or revising it critically for important intellectual content; and
+
+    3. Final approval of the version to be published by  <span class="bold"> IJERGS.</span> </p>
+
+<p> The authors are requested to prepare their manuscripts as per the instructions or specifications given below. It should be noted    that the review process is only depend upon the significance of the work and the care used by authors to represent it, in the form of their manuscripts. Therefore, authors are strongly encouraged to read these instructions carefully before preparing/submitting their manuscript for publication. </p>
+
+ <h4> CRITERIA FOR MANUSCRIPT </h4>
+
+ <p> Submitted manuscripts must meet the following criteria: </p>
+
+ <p> 1. The manuscripts material must be original. <br>
+
+     2. The writing must be clear, concise and unambiguous. <br>
+
+     3. The data should be valid. <br>
+
+     4. The discussions and conclusions drawn by the authors must be reasonable and supportable. <br>
+
+     5. The information must be relevant and interesting to area of research. </p>
+
+  <h4> AUTHOR BENEFITS  </h4>
+
+   <span class="bold"> The benefits of publishing in International Journal of Engineering Research And Generic Science (IJERGS), includes: </span>
+
+ <p> 1. The manuscript publication charges are to be paid for qualitative manuscript and normal publication process. <br>
+
+2. Fast Track publication hub: Manuscript will appear online as soon as it is ready (review time of paper is 1-2 weeks). <br>
+
+3. Excellent editorial standards with better communication. <br>
+
+4. Access free on-line issue of all journals. <br>
+
+5. A precise, fast and constructive peer review process. <br>
+
+6. All abstracts and full text available free on-line to all main universities/institutions worldwide ensures promotion to the widest possible audience. <br>
+
+7. To promote the researchers innovative idea through the fast track publication process and to share their valuable proposal with us, at the same time this organization offers the authors a very less publication charges. <br>
+
+8. If any of the authors and co-authors is part of the editorial board, then this organization offers the various facilities to them. <br> 
+
+We shall be glad to receive your technical contributions at your earliest convenience. Please publicize this journal amongst your colleagues for possible contribution and subscription. </p>
+
+ <h4> SUBMISSION OF MANUSCRIPTS </h4>
+
+ <p> Steps for Manuscripts Submission through Website: <a href="#">  http://www.ijergs.in </a> <br>
+
+Type-written manuscripts prepared using MS Word file should be submitted* by online submission system: <a href="#"> http://www.ijergs.in/submission.</a>  <br>
+
+Manuscripts submission through the journal website is always preferred. In the case of extreme difficulties encountered when submitting online, Covering letter, Title Page with the main manuscripts can be submitted directly as e-mail attachments to the Editor at or email to: <br>
+
+ <a href="#" > editor@ijergs.in </a> or <a href="#" >  editorijergs.in@gmail.com </a> </p>
+
+ <span class="bold"> Note: Article should be submitted through any one of the mode- email or online submission system. </span>
+
+ <h4> CHECK LIST FOR MANUSCRIPT SUBMISSION </h4>
+ 
+
+1. Covering Latter [Cover Note with List of Potential Reviewers]. <br>
+
+2. Main Manuscript: First Page should be named as Manuscript Title Page [Title of the manuscript, Authors name, Authors Affiliations, email ID of all the authors, Corresponding authors name, affiliation with address, mail id, Contact no., Acknowledgements and conflict of interest if any]. Second Page will be Title of the Manuscript, abstract, Key words, Third page onward should contain Introduction, Materials and Methods, Results and/or Discussion, Conclusions & References. <br>
+
+3. Scanned copy of Copy Right Transfer Form, duly signed by the authors. <br>
+
+ <h4> PREPARATION OF MANUSCRIPTS </h4>
+
+ <span class="bold"> As part of the submission process, authors are required to check their submission's compliance with all of the following items, as publication process may be delayed that do not adhere to these guidelines. </span>
+
+It should be arranged in the following order: <br>
+
+<p> 1. Title <br>
+
+    2. Abstract <br>
+
+    3. Keywords  <br>
+
+    4. Introduction  <br>
+
+    5. Materials & Methods  <br>
+
+    6. Results & Discussion  <br>
+
+    7. Conclusion  <br>
+
+    8. References </p>
+
+ <span class="bold"> Main Manuscript should be formatted in accordance with the below mentioned guidelines- </span>
+ <p>  The text files of the Main manuscript are written in Microsoft Word. The text should be double-spaced, in Cambria, font size 10 except the title, heading of the Manuscript (Download the Model Manuscript: <a href="#" >  http://ijergs.in/dowanload </a> </p>
+
+ <h4> Sections:</h4>
+
+ <p> The main body of the Manuscript should be organized into numbered sub-sections, clearly identified and sequentially numbered as section 1, section 2, section 3, etc. Lower level sub-sections may be organized as 1.1, 1.2, 1.3, etc. </p>
+
+ <h4> Images: </h4> <br>
+
+ All images must be provided at a minimum of 300 dpi to ensure professional reproduction.
+
+ <h4> GENERAL INSTRUCTIONS FOR MAIN MANUSCRIPT </h4>
+
+ <h5> First Page: </h5> <br>
+
+It should be named as Manuscript Title Page [Title of the manuscript, Authors name, Authors Affiliations, email ID of all the authors, Corresponding authors name, affiliation with address, mail id, Contact no., Acknowledgements and conflict of interest if any].
+
+ <h5> Second Page: </h5>
+Abstract:Following the Title page, there should be an ‘abstract’ page that should contain the title of paper, the subtitle "Abstract" and a summary of the paper in single space, with double column not exceeding 500 words.
+
+ <h5> Key words: It should not be greater than ten. </h5>
+ <h5> Third Page Onward: </h5>
+
+<h5> >Introduction: </h5> Author should describe the introductory part with suitable references and in the last paragraph of the introduction; author should clear the actual objective and plan of work in details.
+
+ <h5>  Materials & Methods: </h5> It should not be applicable for review article. 
+
+ <h5> Results & Discussion: </h5> It should not be applicable for review article. It should be with the interpretation of the results and their comparison with those of other studies. No need to repeat the results, review literature, textbook knowledge or cite references that do not have a close relationship with the present result.
+
+ <h5> Figures & Tables:</h5> Each figure/table should be numbered, titled. Incorporate images and table at the suitable place in this file [eg-Figure 1:……, Table 1:….
+
+ <h5> Conclusions: </h5> conclude the study linking back to the aim of the study.
+
+ <h5> Abbreviations: </h5> At the first appearance in the abstract and the text, abbreviations should be preceded by words for which they stand.
+
+ <h5> References:  </h5> It should be mention by numbering system, like [1], [1-3], 1,3, 4-6].
+
+ <h4> REVIEW ARTICLES </h4>
+
+ <p> Should be about 10-25 pages long, contain up-to-date information, comprehensively cover relevant literature and preferably be written by scientists who have in-depth knowledge on the topic. All format requirements are same as those applicable to full papers. Review articles need not be divided into sections such as materials and Methods and Results and Discussion, but should definitely have an Abstract, Keywords and Introduction, Conclusions & References if necessary. </p> <br>
+
+ <h5> IJERGS</h5> publishes also invited reviews from the well-known authors. Ask the editors about the topic before submitting the same. Topics related to Systemic critical assessments of literature and data sources.
+
+ <h4> Manuscript Text</h4>
+
+ <h5> Abstract:</h5> Abstract for reviews, should not exceed 250 words and need not be structured. The abstract should not contain abbreviations or references.
+
+ <h5> Key words:</h5> List of key words, not to exceed 10.
+
+ <h5> Introduction: </h5> Summarize the rationale and purpose of the Review, giving only pertinent references. Clearly state the need and concept behind the review.
+
+ <h5> Discussion: </h5>Emphasize the new and important aspects of the Topic of discussion and the conclusions that follow from them. Do not repeat in detail data or other material given in the Introduction section. Relate observations to other relevant studies and point out the implications of the findings and their limitations.
+
+ <h5> Conclusions: </h5> Link the conclusions with the goals of the study but avoid unqualified statements and conclusions not adequately supported by the data. In particular, authors should avoid making statements on economic benefits and costs unless their manuscript includes the appropriate economic data and analysis. Avoid claiming priority and alluding to work that has not been completed. State new hypothesis when warranted, but clearly label them as such.
+
+ <h5> References: </h5>All references must be cited in the text as superscript & numbered in order of appearance, at the end of the article in numeric sequence. Do not include unpublished data or personal communications in the reference list.
+
+ <h5> Acknowledgments:</h5> Acknowledge persons who have made substantive contributions to the review. This part should be incorporated into the title page only.
+
+ <h5> Abbreviations:</h5> The full term for which an abbreviation stands should precede its first use in the text unless it is a standard unit of measurement. Trade names. Generic terms are to be used whenever possible, but trade names and manufacturer name, city, state, and country should be included parenthetically at first mention.
+
+ <h4> RESEARCH ARTICLES </h4>
+
+ <p> Should be about 10-45 pages long, contain up-to-date information, comprehensively cover relevant literature. Research articles should be divided into sections such as Abstract, Keywords and Introduction, materials and Methods and Results and Discussion, Conclusions & References. </p> <br>
+
+ <h4> Manuscript Text </h4>
+ <h5> Abstract: </h5> Abstract for research should not exceed 300 words and need not be structured. The abstract should not contain abbreviations or references.
+
+ <h5> Key words: </h5> List of key words, not to exceed 10.
+
+ <h5> Introduction: </h5> Summarize the rationale and purpose of the work, giving only pertinent references. Clearly state the need and concept behind the work.
+
+  <h5> Results & Discussion:</h5> Emphasize the new and important aspects of the Topic of discussion and the conclusions that follow from them. Do not repeat in detail data or other material given in the Introduction section. Relate observations to other relevant studies and point out the implications of the findings and their limitations.
+
+ <h5> Conclusions: </h5> Link the conclusions with the goals of the study but avoid unqualified statements and conclusions not adequately supported by the data. In particular, authors should avoid making statements on economic benefits and costs unless their manuscript includes the appropriate economic data and analysis. Avoid claiming priority and alluding to work that has not been completed. State new hypothesis when warranted, but clearly label them as such.
+
+ <h5> References: </h5> All references must be cited in the text as superscript & numbered in order of appearance, at the end of the article in numeric sequence. Do not include unpublished data or personal communications in the reference list.
+
+ <h5> Acknowledgments: </h5> Acknowledge persons who have made substantive contributions to the review. This part should be incorporated into the title page only.
+
+ <h5> Abbreviations:</h5> The full term for which an abbreviation stands should precede its first use in the text unless it is a standard unit of measurement. Trade names. Generic terms are to be used whenever possible, but trade names and manufacturer name, city, state, and country should be included parenthetically at first mention.
+
+ <h4> CASE REPORTS // CASE STUDY </h4>
+
+New / interesting / very rare cases can be reported. Cases with clinical significance or implications will be given priority, whereas, mere reporting of a rare case may not be considered. <br>
+
+Abstract: Should not exceed 300 -500 words and need not be structured. <br>
+
+Key words: List of key words should not exceed 10.   <br>
+
+ <h4> Manuscript Text </h4>
+
+ <h5> Introduction: </h5> Should include definition, history, etiopathogenesis, prevalence and distribution patterns. Explain why this report is special.
+
+ <h5> Case Report: </h5> Chief complaint, History, Technical Features, Research graphic and other investigation findings,  Scientific Diagnosis, Research  plan and prognosis.
+
+ <h5> Discussion: </h5> Emphasize the new and important aspects of the Case and the conclusions that follow from them. Do not repeat in detail data or other material given in the Introduction section. Relate observations to other reports in the literature and point out the implications of the findings and their observations.
+
+ <h5> Conclusion: </h5> Link the conclusions with the goals of the case but avoid unqualified statements and conclusions not adequately supported by the data.
+
+ <h5> References: </h5> All references must be cited in the text as superscript & numbered in order of appearance and should appear in numeric sequence, at the end. Do not include unpublished data or personal communications in the reference list. Cite such references parenthetically in the text and include a date.
+
+ <h5> Acknowledgments:</h5> Acknowledge persons who have made substantive contributions directly or indirectly in the preparation of case report and case study. This part should be incorporated into the title page only.
+
+ <h5> Abbreviations: </h5> The full term for which an abbreviation stands should precede its first use in the text unless it is a standard unit of measurement. Trade names. Generic terms are to be used whenever possible, but trade names and manufacturer name, city, state, and country should be included parenthetically at first mention.
+
+ <h4> Short Communication: </h4>
+
+ <p> Up to 1500 words excluding references and abstract and up to 10-15 references. The journal publishes exciting findings, preliminary data or studies that did not yield enough information to make a full paper as short communications. These have the same format requirements as full papers but are only up to 10 pages in length in total. Short Communications should not have subtitles such as Introduction, Materials and Methods, Results and Discussion, all these have to be merged into the running text. Short Communications preferably should have only 3-4 illustration. </p> <br>
+
+ <h4> LETTER TO THE EDITOR </h4>
+ <p> 1. Should be a short and decisive observation. <br> 
+
+2. They should not be preliminary observations that need a later paper for validation. <br>
+
+3. Should be Up to 500 words and 4 references. </p>
+
+ <h4> ANNOUNCEMENTS OF CONFERENCES, MEETINGS, COURSES, AWARDS </h4> 
+
+<p>Any other items likely to be of interest to the readers should be submitted with the name and address of the person from whom additional information can be obtained up to 100 words. </p>
+  <footer> <div class="waper">
+   <div class="ferture">
+     <div class="">
+       <div class="aarav">
+         <marquee style="height: 100px; margin-top: 1px; padding: 9px">
+            <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://oaji.net/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975336818755.gif"
+                       title="OAJI" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="https://scholar.google.co.in/citations?user=lVnpiQUAAAAJ&hl=en&authuser=1" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975360014049.jpg"
+                       title="GOOGLESCHOLAR" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="https://doaj.org/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975360553097.jpg"
+                       title="DOAJ" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://www.citefactor.org/journal/index/13848/international-journal-of-engineering-research-and-generic-science#.WUKWaFFLfIU" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975361197352.png"
+                       title="CIATEFACTOR" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://www.scholarsteer.com/?s=ijergs&post_type=custom_journal&submit=Submit" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975362565652.png"
+                       title="SCHOLARSTEER" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://www.directoryofscience.com/view/International_Journal_of_Engineering_Research_And_Generic_Science_IJERGS?search=1" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975486972523.gif"
+                       title="directoryofscience" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="https://www.biomedcentral.com/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975487463396.gif"
+                       title="BIOMEDICAL" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="https://www.ebsco.com/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975488791162.gif"
+                       title="EBSCO" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://sjifactor.com/passport.php?id=18384" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975490811893.jpg"
+                       title="INNOSPACE" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://www.researcherid.com/ProfileView.action?returnCode=ROUTER.Unauthorized&queryString=KG0UuZjN5Wl4zXbkleERUFbuWH85ZuRqbY3RFKE69F4%253D&SrcApp=CR&Init=Yes" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975491557796.gif"
+                       title="THOMSON" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://orcid.org/0000-0003-0279-5049" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975493914031.png"
+                       title="ORCID" height="60px;" width="190px;"/> </a>
+   </div>
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+    <a href="http://www.cosmosimpactfactor.com/page/journals_details/2825.html" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/15010875278918.jpg"
+                       title="COSMOS" height="60px;" width="190px;"/> </a>
+   </div>
+</footer>  
+</body>

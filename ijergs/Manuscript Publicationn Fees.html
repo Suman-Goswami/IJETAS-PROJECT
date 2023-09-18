@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manuscript Publication Fees </title>
+    <style>
+        h2{
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        table.bold{
+            font-weight: bold;
+        }
+        thead.bold{
+            color: yellow;
+            background-color: red;
+        }
+        th.tabel{
+            text-align: center;
+        }
+        td.red{
+            color: red;
+        }
+        footer{
+            background-color: blue;
+        }
+        table{
+            margin-left: 25%;
+        }
+       
+        .header{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.center-heading{
+    padding: 20px 0px 20px 20px;
+    color: #0084C1;
+}
+.center-heading p{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    padding: 15px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #2A2E30;
+}
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar ul li{
+    list-style: none;
+    font-size: 20px;
+    border-right: 2px solid #1a82f7 ;
+    line-height: 26px;
+}
+.navbar ul li a{
+    padding: 0px 15px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: #1a82f7;
+}
+
+.dropdown-content{
+    display: none;
+}
+.navbar ul li:hover .dropdown-content{
+    display: block;
+    position: absolute;
+    background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+    color: white;
+    z-index: 1;
+
+}
+.navbar ul li:hover .dropdown-content ul {
+    display: block;
+    margin: 10px;
+}
+.navbar ul li:hover .dropdown-content ul li{
+    border-bottom:2px solid #1a82f7;
+    border-right: none;
+    padding: 5px 0px 5px 0px;
+}
+.navbar ul li:hover .dropdown-content ul li:last-child{
+    border-bottom: none;
+}
+.navtext{
+       color: white;
+       font-size: 35px;
+       line-height: 80px;
+       padding: 35px;
+       font-weight: bold;
+}
+.container {
+    display: none;
+    cursor: pointer;
+  }
+ 
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    color: #2A2E30;
+    transition: 0.4s;
+  }
+  
+ 
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+ 
+  .change .bar2 {opacity: 0;}
+ 
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .checkbtn{
+       font-size: 30px;
+       color: white;
+       float: right;
+       line-height: 80px;
+       margin-right: 40px;
+       cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+
+  @media (max-width: 952px){
+    .navtext{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .container{
+        display:none;
+    }
+ }
+ nav ul li a{
+    font-size: 16px;
+ }
+ @media (max-width: 858px){
+    checkbtn{
+        display: block;
+    }
+    .container{
+        display:block;
+        text-align: right;
+        
+    }
+
+   .bar1 .bar2 .bar3{
+    display: block;
+    color:white;
+    background-color: black;
+   }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+ }
+ section{
+    background-size: cover;
+    height: calc(100vh - 80px);
+ }
+    .head{
+        color:red;
+    }   
+       
+        
+    </style>
+</head>
+<body>
+
+
+    <header> 
+        <div class="header">
+            <div class="logo">
+                <img src="logo (1).png">
+            </div>
+            <div class="center-heading">
+                <h1>International Journal of Engineering Technology And Applied Science (IJETAS)</h1>
+                <p>A Engineering Publication Hub</p>
+            </div>
+        </div>
+        <div class="navbar"> 
+          <h1 class="navtext"> IJETAS </h1>
+          <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+         <ul>
+            <li><a class="1" href="home.html" class="active">Home</a></li>
+            <li>
+                <a href="Editorial Board Members.html">Editorial Board</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="Editorial Board Members.html">Editorial Board Members</a></li>
+                        <li><a href="News and Updates.html">News & Updates</a></li>
+                        <li><a href="Join Our Board.html">Join Our Board</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="2" href="Indexing.html">Indexing</a></li>
+            <li><a class="3" href="special issue.html">Special Issue</a></li>
+            <li>
+                <a class="4"href="#">Submit Your Paper</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="Online Submission.html">Online Submission</a></li>
+                        <li><a href="Manuscript Publicationn Fees.html">Manuscript Publication Fees</a></li>
+                        <li><a href="Call For Paper.html">Call For Paper</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a class="5" href="Up Coming Events.html">Upcoming Event</a></li>
+            <li>
+                <a href="Download Form.html">Download</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">AUTHOR INSTRUCTIONS FOR MANUSCRIPT</a></li>
+                        <li><a href="#">COVERING LETTER</a></li>
+                        <li><a href="#">JOIN US</a></li>
+                        <li><a href="#">REVIEWR FORM</a></li>
+                        <li><a href="#">TRANSFER OF COPYRIGHT AGREEMENT</a></li>
+                        <li><a href="#">Manuscript Template</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a class="6"href="#">Subject Category</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="#">Computer Science Engineering</a></li>
+                        <li><a href="#">Artificial Intelligence</a></li>
+                        <li><a href="#">Civil Engineering</a></li>
+                        <li><a href="#">Information Technology</a></li>
+                        <li><a href="#">Mechanical Engineering</a></li>
+                        <li><a href="#">Electrical Engineering</a></li>
+                        <li><a href="#">Cyber Security </a></li>
+                        <li><a href="#">Physics</a></li>
+                        <li><a href="#">Chemistry</a></li>
+                        <li><a href="#">Maths</a></li>
+                        
+
+
+
+                    </ul>
+                </div>
+            </li>
+            <li><a class="7" href="#">IJETAS Menu</a>
+                <div class="dropdown-content">
+                    <ul>
+                      <a href="Call For Paper.html"> Call For Paper </a>
+                      <a href="Manuscript Publicationn Fees.html"> Publilcation Charge </a>
+                      <a href="Indexing.html"> Indexing </a>
+                      <a href="author guidelines.html"> Author Guideline </a>
+                     
+                    </ul>
+                    <li><a href="Contact.html">Contact Us</a>
+        </ul>
+            </div>
+       </header>
+       <h2> Manuscript Publication Fees </h2>
+       <h3> Publication Charges </h3>
+       <p> The Publication Charges are to be paid for qualitative manuscript and normal publication process. Publishing charges for online publication: </p>
+     <p>
+        <main>
+       <table class="bold" border="3" height="500px" width="500px" >
+          <thead>
+           <tr>
+            <th> <td class="head"> Author Category </td> </th>
+            <th> <td class="head"> Publication Fee For Single Research Paper / Review Paper / article / Case Study..... etc </td></th>
+           </tr>
+           <tr>
+            <th> <td class="head"> Indian Author </td> </th>
+            <th> <td> 1500 INR </td></th>
+        </tr>
+        <tr>
+            <th> <td class="head"> International Author </td> </th>
+            <th> <td> 80 USD </td> </th>
+        </tr>
+    </thead> 
+    </table>
+  </p>
+        <h3>
+            Annual Publication / Subscription for Indian Authors and International Authors: 
+        </h3>
+  <p>
+        <table class="bold" border="3" height="400px" width="700px">
+           <thead>
+            <tr> 
+                <th> <td> Author Category </td> </th>
+                <th> <td> Annual Fee </td></th>
+                <th> <td> Research Paper / Review Paper / Article / Case Study..... etc </td> </th>
+            </tr>
+           </thead>
+           <tr>
+            <th> <td class="head"> Indian Author </td> </th>
+            <th> <td> 1000 INR </td> </th>
+            <th> <td> 10 </td> </th>
+           </tr>
+           <tr>
+            <th> <td class="head"> International Author </td> </th>
+            <th> <td> 1000 USD </td> </th>
+            <th> <td> 15 </td> </th>
+           </tr>
+        </table>
+    </p>
+    <h3> Account Details </h3>
+    <table border="5">
+       <thead class="bold">
+        <tr> <th colspan="3" class="tabel" > <td> Accounts Details </td> </th> </tr>
+       </thead>
+       <tr> 
+         <th> <td class="red"> Name of Account Holder </td> </th>
+         <th> <td> Mrs. NITU </td> </th> 
+       </tr>
+       <tr>
+        <th> <td class="red"> Address of Account Holder </td> </th>
+        <th> <td> JAIPUR (RAJASTHAN) </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Bank Name </td> </th>
+        <th> <td> STATE BANK OF INDIA (SBI) </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Account No. </td> </th>
+        <th> <td> 20298037702 </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Account Type </td> </th>
+        <th> <td> SAVING </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Branch Code </td> </th>
+        <th> <td> 31840 </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> IFSC Code </td> </th>
+        <th> <td> SBIN 0031840 </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> MICR Code </td> </th>
+        <th> <td> 302002149 </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Swift Code </td> </th>
+        <th> <td> SBININBB154 </td> </th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Branch Address </td> </th>
+        <th> <td> KUMBHA MARG, PRATAP NAGAR, JAIPUR, DISTT. JAIPUR, RAJASTHAN, INDIA - 302033 </td ></th>
+       </tr>
+       <tr>
+        <th> <td class="red"> Country </td> </th>
+        <th> <td> INDIA </td> </th>
+       </tr>
+     </table>
+    </main>
+     <footer>
+
+        <div class="waper">
+         <div class="ferture">
+           <div class="">
+             <div class="aarav">
+               <marquee style="height: 100px; margin-top: 1px; padding: 9px">
+                  <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://oaji.net/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975336818755.gif"
+                             title="OAJI" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="https://scholar.google.co.in/citations?user=lVnpiQUAAAAJ&hl=en&authuser=1" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975360014049.jpg"
+                             title="GOOGLESCHOLAR" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="https://doaj.org/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975360553097.jpg"
+                             title="DOAJ" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://www.citefactor.org/journal/index/13848/international-journal-of-engineering-research-and-generic-science#.WUKWaFFLfIU" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975361197352.png"
+                             title="CIATEFACTOR" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://www.scholarsteer.com/?s=ijergs&post_type=custom_journal&submit=Submit" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975362565652.png"
+                             title="SCHOLARSTEER" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://www.directoryofscience.com/view/International_Journal_of_Engineering_Research_And_Generic_Science_IJERGS?search=1" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975486972523.gif"
+                             title="directoryofscience" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="https://www.biomedcentral.com/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975487463396.gif"
+                             title="BIOMEDICAL" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="https://www.ebsco.com/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975488791162.gif"
+                             title="EBSCO" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://sjifactor.com/passport.php?id=18384" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975490811893.jpg"
+                             title="INNOSPACE" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://www.researcherid.com/ProfileView.action?returnCode=ROUTER.Unauthorized&queryString=KG0UuZjN5Wl4zXbkleERUFbuWH85ZuRqbY3RFKE69F4%253D&SrcApp=CR&Init=Yes" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975491557796.gif"
+                             title="THOMSON" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://orcid.org/0000-0003-0279-5049" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975493914031.png"
+                             title="ORCID" height="60px;" width="190px;"/> </a>
+         </div>
+                    <div class="abot" style="padding: 1px 0; display: inline-table;">
+          <a href="http://www.cosmosimpactfactor.com/page/journals_details/2825.html" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/15010875278918.jpg"
+                             title="COSMOS" height="60px;" width="190px;"/> </a>
+         </div>
+                  
+       </marquee>
+               
+          <section>  
+          </footer>
+
+
+       
+</body>
+</html>

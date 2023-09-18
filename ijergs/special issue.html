@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .ifect a{
+            text-decoration: none;
+            align-items: center;
+            font-size: medium;
+            color: black;
+        }
+        
+        .ifect a:hover{
+            color: blueviolet;
+            text-decoration: underline;
+        }
+        footer{
+          background-color: blue;
+        }
+        h2{
+          color:white;
+          background-color:black;
+          text-align: center;
+        }
+        .header{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.center-heading{
+    padding: 20px 0px 20px 20px;
+    color: #0084C1;
+}
+.center-heading p{
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    padding: 15px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    background-color: #2A2E30;
+}
+.navbar ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar ul li{
+    list-style: none;
+    font-size: 20px;
+    border-right: 2px solid #1a82f7 ;
+    line-height: 26px;
+}
+.navbar ul li a{
+    padding: 0px 15px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: #1a82f7;
+}
+
+.dropdown-content{
+    display: none;
+}
+.navbar ul li:hover .dropdown-content{
+    display: block;
+    position: absolute;
+    background: -webkit-linear-gradient(top, #2F2727, #1a82f7);
+    color: white;
+    z-index: 1;
+
+}
+.navbar ul li:hover .dropdown-content ul {
+    display: block;
+    margin: 10px;
+}
+.navbar ul li:hover .dropdown-content ul li{
+    border-bottom:2px solid #1a82f7;
+    border-right: none;
+    padding: 5px 0px 5px 0px;
+}
+.navbar ul li:hover .dropdown-content ul li:last-child{
+    border-bottom: none;
+}
+.navtext{
+       color: white;
+       font-size: 35px;
+       line-height: 80px;
+       padding: 35px;
+       font-weight: bold;
+}
+.container {
+    display: none;
+    cursor: pointer;
+  }
+ 
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    color: #2A2E30;
+    transition: 0.4s;
+  }
+  
+ 
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+ 
+  .change .bar2 {opacity: 0;}
+ 
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  .checkbtn{
+       font-size: 30px;
+       color: white;
+       float: right;
+       line-height: 80px;
+       margin-right: 40px;
+       cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+
+  @media (max-width: 952px){
+    .navtext{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    .container{
+        display:none;
+    }
+ }
+ nav ul li a{
+    font-size: 16px;
+ }
+ @media (max-width: 858px){
+    checkbtn{
+        display: block;
+    }
+    .container{
+        display:block;
+        text-align: right;
+        
+    }
+
+   .bar1 .bar2 .bar3{
+    display: block;
+    color:white;
+    background-color: black;
+   }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+ }
+ section{
+    background-size: cover;
+    height: calc(100vh - 80px);
+ }
+    </style>
+</head>
+<body>
+
+
+  <header> 
+    <div class="header">
+        <div class="logo">
+            <img src="logo (1).png">
+        </div>
+        <div class="center-heading">
+            <h1>International Journal of Engineering Technology And Applied Science (IJETAS)</h1>
+            <p>A Engineering Publication Hub</p>
+        </div>
+    </div>
+    <div class="navbar"> 
+      <h1 class="navtext"> IJETAS </h1>
+      <div class="container" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+     <ul>
+        <li><a class="1" href="home.html" class="active">Home</a></li>
+        <li>
+            <a href="Editorial Board Members.html">Editorial Board</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="Editorial Board Members.html">Editorial Board Members</a></li>
+                    <li><a href="News and Updates.html">News & Updates</a></li>
+                    <li><a href="Join Our Board.html">Join Our Board</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a class="2" href="Indexing.html">Indexing</a></li>
+        <li><a class="3" href="special issue.html">Special Issue</a></li>
+        <li>
+            <a class="4"href="#">Submit Your Paper</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="Online Submission.html">Online Submission</a></li>
+                    <li><a href="Manuscript Publicationn Fees.html">Manuscript Publication Fees</a></li>
+                    <li><a href="Call For Paper.html">Call For Paper</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a class="5" href="Up Coming Events.html">Upcoming Event</a></li>
+        <li>
+            <a href="Download Form.html">Download</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">AUTHOR INSTRUCTIONS FOR MANUSCRIPT</a></li>
+                    <li><a href="#">COVERING LETTER</a></li>
+                    <li><a href="#">JOIN US</a></li>
+                    <li><a href="#">REVIEWR FORM</a></li>
+                    <li><a href="#">TRANSFER OF COPYRIGHT AGREEMENT</a></li>
+                    <li><a href="#">Manuscript Template</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a class="6"href="#">Subject Category</a>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#">Computer Science Engineering</a></li>
+                    <li><a href="#">Artificial Intelligence</a></li>
+                    <li><a href="#">Civil Engineering</a></li>
+                    <li><a href="#">Information Technology</a></li>
+                    <li><a href="#">Mechanical Engineering</a></li>
+                    <li><a href="#">Electrical Engineering</a></li>
+                    <li><a href="#">Cyber Security </a></li>
+                    <li><a href="#">Physics</a></li>
+                    <li><a href="#">Chemistry</a></li>
+                    <li><a href="#">Maths</a></li>
+                    
+
+
+
+                </ul>
+            </div>
+        </li>
+        <li><a class="7" href="#">IJETAS Menu</a>
+            <div class="dropdown-content">
+                <ul>
+                  <a href="Call For Paper.html"> Call For Paper </a>
+                  <a href="Manuscript Publicationn Fees.html"> Publilcation Charge </a>
+                  <a href="Indexing.html"> Indexing </a>
+                  <a href="author guidelines.html"> Author Guideline </a>
+                 
+                </ul>
+                <li><a href="Contact.html">Contact Us</a>
+    </ul>
+        </div>
+   </header>
+
+
+    <div class="wel">
+       <h2> Special Issues </h2>
+        <div class="wel-bot-cen"> <br/>
+          <div style="clear:both"></div>
+        </div>
+        <div class="issuse"> 
+          <span><b>Articles:</b></span> <br/>
+          <br/>
+          
+  
+  
+        <div class="ifect">
+  
+            <table border="3" >
+    <tr>
+      <th>S.No.</th>
+      <th>Title of Manuscript</th>
+      <th>Page No</th>
+      <th>Download/ PDF</th>
+  
+    </tr>
+  
+  
+    <tr>
+  
+      <td>1</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/297" style="color:black;">A Review on Current Research Trends in Micro- EDM</a></b>
+  </br></br>Author: <b>Pulkit Mathur, Raja Kumar, Karan Kaushik, Kapil Karadia</b></td> 
+      <td>283-290</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>2</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/296" style="color:black;">A Move from 360 degree to 720 degree Performance Appraisal</a></b>
+  </br></br>Author: <b>Shrutika Paliwal, Amit Kumar, Preeti Dhanetwal, Sangeeta Panchal, Indarjeet Ladkani</b></td> 
+      <td>278-282</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>3</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/295" style="color:black;">Fractional Calculus Results Based on Extended Gauss Hypergeometric Functions and Integral Transform</a></b>
+  </br></br>Author: <b>Deepti Arora</b></td> 
+      <td>261-277</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+    <tr>
+  
+      <td>4</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/294" style="color:black;">Fractional Integration of Multivariable H-function and M-series via Pathway Model</a></b>
+  </br></br>Author: <b>Deepti Arora</b></td> 
+      <td>249-260</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+   
+    <tr>
+  
+      <td>5</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/293" style="color:black;">An analysis on Wind Power</a></b>
+  </br></br>Author: <b>Ankit Agarwal, Rakesh Sharma, Tapendra Tailor</b></td> 
+      <td>242-248</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+   
+    <tr>
+  
+      <td>6</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/292" style="color:black;">An Overview on IOT Based Smart Agriculture System</a></b>
+  </br></br>Author: <b>Ravindra Singh Maan, Archana Morya, Archana Singh</b></td> 
+      <td>236-241</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ D
+    <tr>
+  
+      <td>7</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/291" style="color:black;">Implementation of Unified Power Flow Controller for Wheeling charges Reduction in a Deregulated Power System</a></b>
+  </br></br>Author: <b>Rakesh Sharma, Archana Maurya, Tapendra Tailor</b></td> 
+      <td>226-235</td>
+      <td><a href="a.pdf"> Download <a></td>
+        </tr>
+ 
+    <tr>
+  
+      <td>8</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/290" style="color:black;">Attacks and Security Issues of Mobile Ad Hoc Networks</a></b>
+  </br></br>Author: <b>Ravindra Maan, Archana Morya, Gopesh Sharma </b></td> 
+      <td>210-225</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>9</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/289" style="color:black;">Advanced Wireless Communication</a></b>
+  </br></br>Author: <b>Tanya Priya,Dimple Jangir, Gaurav Soni, Purva Sakhuja</b></td> 
+      <td>204-209</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>10</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/288" style="color:black;">Maze Solving Algorithm</a></b>
+  </br></br>Author: <b>Ravindra Singh Maan, Manjit Singh Yadav, Radha Saini, Purshottam Sharma</b></td> 
+      <td>199-203</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+   
+    <tr>
+  
+      <td>11</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/287" style="color:black;">A Review on Low Voltage Low Power Operational Transconductance Amplifier (OTA) for Biomedical Application</a></b>
+  </br></br>Author: <b>Gaurav Kumar Soni, Himanshu Singh, Sonam Gour</b></td> 
+      <td>192-198</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+    <tr>
+  
+      <td>12</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/286" style="color:black;">A Modern Approach in Pressing Surface technology Touch Screen</a></b>
+  </br></br>Author: <b>Himanshu Singh, Dimple Jangir, Ankit Agarwal</b></td> 
+      <td>186-192</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>13</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/285" style="color:black;">Shortest Distance Maze Solving Robot</a></b>
+  </br></br>Author: <b>Sonam Gour, Mohini Dgal, Prahalad Jat</b></td> 
+      <td>173-185</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>14</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/284" style="color:black;">Modified Low-Power and Area-Efficient Carry Select Adder using D-Latch</a></b>
+  </br></br>Author: <b>Monika Tanwani, Smriti Jain, Khushboo Joshi</b></td> 
+      <td>165-172</td>
+      <td><a href="a.pdf"> Download <a></td>
+    
+    </tr>
+ 
+    <tr>
+  
+      <td>15</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/283" style="color:black;">MIMO Systems in Wireless Communications</a></b>
+  </br></br>Author: <b>Himanshu Singh, Monika Tanwani, Smriti Jain</b></td> 
+      <td>159-164</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>16</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/282" style="color:black;">A CMOS Low Power Digital Variable Gain Amplifier Design</a></b>
+  </br></br>Author: <b>Sonam Gour, Archana Singh, Khushboo Joshi</b></td> 
+      <td>153-158</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>17</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/281" style="color:black;">Augmented Reality</a></b>
+  </br></br>Author: <b>Smriti Jain, Vaishali Sharma, Bhavya Sareen</b></td> 
+      <td>151-152</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>18</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/280" style="color:black;">Humanoid Robots</a></b>
+  </br></br>Author: <b>Krishna Kumar Sharma, Vivek Jethni, Karuna Soni</b></td> 
+      <td>147-150</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>19</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/278" style="color:black;">Biometric Recognition</a></b>
+  </br></br>Author: <b>1Geetanjli Bakshi, 2Pradeep Jha, 3Shilpi Mishra, 4Sudhanshu Vashistha, 5Hari Mehta</b></td> 
+      <td>143-146</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>20</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/277" style="color:black;">A Survey on Automatic Face Recognition under Partial Occlusion</a></b>
+  </br></br>Author: <b>Sudhanshu Vashistha, Amit Kumar Yadav, Angha Sharma</b></td> 
+      <td>138-142</td>
+      <td><a href="a.pdf"> download <a></td>
+    </tr>
+   
+    <tr>
+  
+      <td>21</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/275" style="color:black;">An Productive proposal to Content Based Image Retrieval System</a></b>
+  </br></br>Author: <b>Naveen Tiwari, Bhavya Sareen,Vaishali Sharma</b></td> 
+      <td>134-137</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>22</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/274" style="color:black;">Applying Machine Learning Methods in Diagnosing Heart Disease for Diabetic Patients</a></b>
+  </br></br>Author: <b>Shilpi Mishra, Bhavesh Jain, Vivek Jethani</b></td> 
+      <td>127-133</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>23</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/273" style="color:black;">Implementation of Advanced Encryption Standard (AES) Algorithm for Image Encryption</a></b>
+  </br></br>Author: <b>Sudhanshu Vashistha, Karuna Soni, Vivek Jethani</b></td> 
+      <td>120-126</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>24</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/272" style="color:black;">Review on: Different Cryptography Algorithm for Video</a></b>
+  </br></br>Author: <b>Pradeep Jha, Karuna Soni, Shalini Joshi</b></td> 
+      <td>114-119</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>25</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/271" style="color:black;">Artificial Intelligence and its Application in Different Areas</a></b>
+  </br></br>Author: <b>Vaishali Sharma, Bhavesh Jain, Pramila Kumari</b></td> 
+      <td>106-113</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+   
+    <tr>
+  
+      <td>26</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/270" style="color:black;">Medical Images Protection Using Genetic Algorithm</a></b>
+  </br></br>Author: <b>Hari Mehta, Mohit Pareek, Naveen Goyal</b></td> 
+      <td>102-105</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>27</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/269" style="color:black;">Image Encryption Using Genetic Algorithm</a></b>
+  </br></br>Author: <b>Naveen Tiwari, Bhavya Sareen, Anagha Sharma</b></td> 
+      <td>97-101</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+    <tr>
+  
+      <td>28</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/268" style="color:black;">An Overview on Memory Management</a></b>
+  </br></br>Author: <b>Sourabh Banga, Vaishali Sharma, Sudhanshu Vashistha</b></td> 
+      <td>94-96</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+   
+    <tr>
+  
+      <td>29</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/265" style="color:black;">Theory of Contraction</a></b>
+  </br></br>Author: <b>Anuj Raj Choudhary, Hament Kumar Sain, Anil Kumar Sharma</b></td> 
+      <td>89-93</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>30</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/264" style="color:black;">A Study on Mechanical Properties of Cement Concrete by Partial Replacement of Fine Aggregates with Bottom Ash</a></b>
+  </br></br>Author: <b>Hemant kumar sain, Sarjeet singh yadav, Shailendra Upadhay, Anil Sharma</b></td> 
+      <td>79-88</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+   
+    <tr>
+  
+      <td>31</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/263" style="color:black;">Utilization of Sugarcane Bagasse ash in Concrete as Partial Replacement of Cement</a></b>
+  </br></br>Author: <b>Sarjeet Singh Yadav, Hemant Kumar Sain</b></td> 
+      <td>73-78</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>32</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/262" style="color:black;">An Experimental Investigation on Concrete containing Meta kaoline</a></b>
+  </br></br>Author: <b>Sayed Imran Ali, Mukesh Kumar Yadav, Nitin Saini, Yashpal Sherawat</b></td> 
+      <td>69-72</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>33</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/261" style="color:black;">Case Studies of Failure of Cast-In-Situ Piles</a></b>
+  </br></br>Author: <b>Sayed Imran Ali, Mohsin Khan Agwan, Ramdhan Saini, Vikas Yadav</b></td> 
+      <td>62-68</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+    <tr>
+  
+      <td>34</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/260" style="color:black;">Strength of Concrete Grade M30 & M35 by Partial Replacement of Cement with Paper Ash and Fly Ash</a></b>
+  </br></br>Author: <b>Anil Sharma, Priyanka Mandal, Manoj Kumar Sharma</b></td> 
+      <td>52-61</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>35</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/259" style="color:black;">Study and Experimental work on Lightweight Concrete</a></b>
+  </br></br>Author: <b>Anil Sharma, Arvind Singh Gaur, Mahesh Saini</b></td> 
+      <td>44-51</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+      <td></td>
+      <td></td>
+      <td>01-05</td>
+     
+    </tr>
+    
+   
+    <tr>
+  
+      <td>36</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/258" style="color:black;">Utilization of GGBS and Marble Slurry by Partial Replacement of Cement and Fine Aggregate on Concrete Properties</a></b>
+  </br></br>Author: <b>Er. Arvind Singh Gaur, Dilip Panwar, Karan Singh</b></td> 
+      <td>36-43</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>37</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/257" style="color:black;">Heat Transfer Characteristics of Vapour Compression Refrigeration System Using Nano-Refrigerants</a></b>
+  </br></br>Author: <b>Happa Khan</b></td> 
+      <td>30-35</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+   
+    <tr>
+  
+      <td>38</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/256" style="color:black;">Finite Element Analysis of Temperature Distribution and Residual Stresses in Wire Electrical Discharge Machining Process</a></b>
+  </br></br>Author: <b>Sanjiv Kumar</b></td> 
+      <td>18-29</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+
+   
+    <tr>
+  
+      <td>39</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/255" style="color:black;">Design and Analysis of Sierpinski Fractal Antenna</a></b>
+  </br></br>Author: <b>Prof.Yogesh Bhomia</b></td> 
+      <td>08-17</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+ 
+    <tr>
+  
+      <td>40</td>
+      <td><b><a href="https://www.ijergs.in/issue/page/254" style="color:black;">Secure Data Communication using Information Hiding Algorithm and its Implementation in Visual Cryptography</a></b>
+  </br></br>Author: <b>Manish Choubisa, Manish Dubey</b></td> 
+      <td>01-07</td>
+      <td><a href="a.pdf"> Download <a></td>
+    </tr>
+  
+   </table>
+  </div>
+
+
+  <footer>
+
+    <div class="waper">
+     <div class="ferture">
+       <div class="">
+         <div class="aarav">
+           <marquee style="height: 100px; margin-top: 1px; padding: 9px">
+              <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://oaji.net/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975336818755.gif"
+                         title="OAJI" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="https://scholar.google.co.in/citations?user=lVnpiQUAAAAJ&hl=en&authuser=1" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975360014049.jpg"
+                         title="GOOGLESCHOLAR" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="https://doaj.org/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975360553097.jpg"
+                         title="DOAJ" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://www.citefactor.org/journal/index/13848/international-journal-of-engineering-research-and-generic-science#.WUKWaFFLfIU" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975361197352.png"
+                         title="CIATEFACTOR" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://www.scholarsteer.com/?s=ijergs&post_type=custom_journal&submit=Submit" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975362565652.png"
+                         title="SCHOLARSTEER" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://www.directoryofscience.com/view/International_Journal_of_Engineering_Research_And_Generic_Science_IJERGS?search=1" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975486972523.gif"
+                         title="directoryofscience" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="https://www.biomedcentral.com/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975487463396.gif"
+                         title="BIOMEDICAL" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="https://www.ebsco.com/" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975488791162.gif"
+                         title="EBSCO" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://sjifactor.com/passport.php?id=18384" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975490811893.jpg"
+                         title="INNOSPACE" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://www.researcherid.com/ProfileView.action?returnCode=ROUTER.Unauthorized&queryString=KG0UuZjN5Wl4zXbkleERUFbuWH85ZuRqbY3RFKE69F4%253D&SrcApp=CR&Init=Yes" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975491557796.gif"
+                         title="THOMSON" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://orcid.org/0000-0003-0279-5049" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/14975493914031.png"
+                         title="ORCID" height="60px;" width="190px;"/> </a>
+     </div>
+                <div class="abot" style="padding: 1px 0; display: inline-table;">
+      <a href="http://www.cosmosimpactfactor.com/page/journals_details/2825.html" target="_blank" class="lo-laft1" style="padding: 0 8px 8px 8px;"> <img height="60px;" width="150px;" src="http://www.ijergs.in/asset/images/uploads/15010875278918.jpg"
+                         title="COSMOS" height="60px;" width="190px;"/> </a>
+     </div>
+              
+   </marquee>
+           
+      <section>  
+      </footer>
+  
+</body>
+</html>
